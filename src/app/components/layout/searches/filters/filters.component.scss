@@ -1,0 +1,57 @@
+@import '../../../../../styles/global/colours';
+@import '../../../../../styles/global/fonts';
+@import '../../../../../styles/global/mixins';
+
+.filterHightlightArea {
+    display: block;
+    height: auto;
+    width: 20%;
+    float: left;
+    
+    .filterBox {
+        width: 100%;
+
+        h1 {
+            font-family: $fontTitleStack;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .section {
+            padding: 20px 0px 0px 0px;
+        }
+
+        span {
+            display: block;
+            width: 90%;
+            padding: 0px 10px;
+
+            &:hover {
+                background-color: $main-light-accent;
+            }
+
+            .checkbox {
+                appearance: none;
+                height: 20px;
+                width: 20px;
+                border: 1px solid grey;
+                border-radius: 5px;
+                vertical-align: middle;
+
+                &:hover {
+                    background-color: $lighter-yellow;
+                }
+
+                &:checked {
+                    background-color: $main-brand-color;
+                }
+            }
+        }
+
+        label {
+            width: 85%;
+            padding: 0px 0px 0px 10px;
+            margin: 5px 0px;
+        }
+    }
+}

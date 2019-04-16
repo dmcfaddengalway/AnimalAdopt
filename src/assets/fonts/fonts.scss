@@ -1,0 +1,36 @@
+// Uses font files as below, Regular is used twice
+
+@font-face {
+    font-family: 'RobotoHeader';
+    font-size: 48px;
+    font-weight: 700;
+    src: './Roboto-Bold.ttf';
+}
+
+@font-face {
+    font-family: 'RobotoTitle';
+    font-size: 36px;
+    font-weight: 500;
+    src: './Roboto-Medium.ttf';
+}
+
+@font-face {
+    font-family: 'RobotoRegularSubheader';
+    font-size: 30px;
+    font-weight: 400;
+    src: './Roboto-Regular.ttf';
+}
+
+@font-face {
+    font-family: 'RobotoRegularBody';
+    font-size: 24px;
+    font-weight: 400;
+    src: './Roboto-Regular.ttf';
+}
+
+@font-face {
+    font-family: 'RobotoCaption';
+    font-size: 24px;
+    font-weight: 300;
+    src: './Roboto-Light.ttf';
+}

@@ -1,0 +1,94 @@
+@import '../../../../styles/global/fonts';
+@import '../../../../styles/global/colours';
+@import '../../../../styles/global/mixins';
+
+html {
+  height: 100vh;
+  width: 100vw;
+}
+
+.mainBody {
+  height: 100%;
+  width: 100%;
+}
+
+.dogVideo {
+  position: fixed;
+  right: 0; 
+  bottom: 0;
+  width: 110%; 
+  height: 120%;
+  z-index: -100;
+}
+
+.loginBox {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.loginCard {
+  background-color: rgba(255, 255, 255, 0.4);
+  width: 30%;
+  border-radius: 5px;
+  padding: 20px;
+  margin: auto;
+}
+
+input, .btn {
+  border: none;
+  display: block;
+  margin: 10px auto;
+  @include input(60%, 15px, 0.85, $fontBodyStack, 18px, 5px);
+}
+
+hr {
+  border: 2px solid $cool-white;
+  border-radius: 2px;
+}
+
+.toSignup {
+  font-family: $fontBodyStack;
+  font-size: 16px;
+  margin: 0 auto;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+    color: $main-brand-color;
+  }
+}
+
+/* add appropriate colors to fb, twitter and google buttons */
+
+.twitter {
+  background-color: #55ACEE;
+  color: white;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.google {
+  background-color: #dd4b39;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.github {
+    background-color: #262626;
+    color: white;
+    margin-bottom: 30px;
+  }
+
+/* style the submit button */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}

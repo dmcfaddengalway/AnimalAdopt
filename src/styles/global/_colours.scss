@@ -1,0 +1,23 @@
+$yellow: #EBB31C;
+$orange: #C07945;
+$green: #287536;
+$blue: #96BFB7;
+$cool-white: #F9F9FA;
+$deep-black: #000000;
+$red: #f44336;
+
+$darken-yellow: darken($yellow, 20%);
+$lighter-yellow: lighten($yellow, 20%);
+$darken-green: darken($green, 20%);
+$lighter-green: lighten($green, 20%);
+
+$main-brand-color: $yellow;
+$main-dark-accent: $orange;
+$main-dark-shade: $green;
+$main-light-accent: $blue;
+$main-light-shade: $cool-white;
+$main-danger-color: $red;
+$main-dark-color: $deep-black;
+
+$success-green: $lighter-green;
+$info-green: $darken-green;

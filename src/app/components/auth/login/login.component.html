@@ -1,0 +1,36 @@
+<div class="mainBody">
+
+  <video class="dogVideo" onloadedmetadata="this.muted=true" autoplay loop>
+    <source src="/assets/media/videos/black_dog.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <div class="loginBox">
+    <div class="loginCard">
+      <form method="post">
+          <input type="text" class="email" placeholder="E-mail" required>
+          <input type="password" class="password" placeholder="Password" required>
+          <input type="submit" (onclick)="signInWithEmailAndPassword()" value="Login">
+      </form>
+
+        <hr>
+
+        <button type="button" class="btn btn-block google" (click)="signInWithGoogle()">
+          <i class="fa fa-google" aria-hidden="true"></i>
+          Login with Google
+        </button>
+
+        <button type="button" class="btn btn-block twitter" (click)="signInWithTwitter()">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+          Login with Twitter
+        </button>
+
+        <button type="button" class="btn btn-block github" (click)="signInWithGithub()">
+          <i class="fa fa-github" aria-hidden="true"></i>
+          Login with Github
+        </button>
+
+        <p class="toSignup">New to AnimalAdopt? <a routerLink="/signup">Signup here.</a></p>
+    </div>
+  </div>
+</div>

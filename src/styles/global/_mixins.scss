@@ -1,0 +1,24 @@
+@mixin input($width, $padding, $opacity, $fontFamily, $fontSize, $borderRadius) {
+    width: $width;
+    padding: $padding;
+    opacity: $opacity;
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    border-radius: $borderRadius;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+@mixin button($width, $height, $fontSize, $border, $borderRadius, $hoverBackground) {
+    width: $width;
+    height: $height;
+    font-size: $fontSize;
+    border: $border;
+    border-radius: $borderRadius;
+
+    &:hover {
+        background-color: $hoverBackground;
+    }
+}

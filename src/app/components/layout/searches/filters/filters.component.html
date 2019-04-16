@@ -1,0 +1,62 @@
+<div class="filterHightlightArea">
+  
+  <div class="filterBox">
+    <div>
+      <h1>Animal</h1>
+      <form class="form-group" method="POST">
+        <span *ngFor="let type of types; index as i">
+          <input class="checkbox" type="checkbox" id="{{type}} + ${i}" name="{{type}}" [checked]="false" (click)="updateFilters(type)">
+          <label for="{{type}} + ${i}">{{ type }}</label>
+          <br>
+        </span>
+      </form>
+      
+      <h1>Age</h1>
+      <form class="form-group" method="POST">
+        <span *ngFor="let age of ages; index as i">
+            <input class="checkbox" type="checkbox" id="{{age}} + ${i}" name="{{age}}" [checked]="false" (click)="updateFilters(age)">
+            <label for="{{age}} + ${i}">{{ age }}</label>
+            <br>
+        </span>
+      </form>
+
+      <h1 class="section">Breed</h1>
+      <form>
+        <span *ngFor="let breed of breeds; index as i">
+          <input class="checkbox" type="checkbox" id="{{breed}} + ${i}" name="{{breed}}" [checked]="false" (click)="updateFilters(breed)">
+          <label for="{{breed}} + ${i}">{{ breed }}</label>
+          <br>
+        </span>
+      </form>
+
+      <h1 class="section">Neutered</h1>
+      <form>
+        <span *ngFor="let status of neuterStatus; index as i">
+          <input class="checkbox" type="checkbox" id="{{status}} + ${i}" name="{{status}}" [checked]="false" (click)="updateFilters(status)">
+          <label for="{{status}} + ${i}">{{ status }}</label>
+          <br>
+        </span>
+      </form>
+
+      <h1 class="section">Size</h1>
+      <form>
+        <span *ngFor="let size of sizes; index as i">
+          <input class="checkbox" type="checkbox" id="{{size}} + ${i}" name="{{size}}" [checked]="false" (click)="updateFilters(size)">
+          <label for="{{size}} + ${i}">{{ size }}</label>
+          <br>
+        </span>
+      </form>
+
+      <h1 class="section">Maintenance Level</h1>
+      <form>
+        <span *ngFor="let maintenanceLevel of maintenance; index as i">
+          <input class="checkbox" type="checkbox" id="{{maintenanceLevel}} + ${i}" name="{{maintenanceLevel}}" [checked]="false" (click)="updateFilters(maintenanceLevel)">
+          <label for="{{maintenanceLevel}} + ${i}">{{ maintenanceLevel }}</label>
+          <br>
+        </span>
+      </form>
+    </div>
+
+  </div>
+
+</div>

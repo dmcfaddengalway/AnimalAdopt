@@ -1,0 +1,157 @@
+
+{
+  "displayAnimals": [
+    {
+      "id": 1,
+      "type": "dog",
+      "breed": "Bulldog",
+      "gender": "Male",
+      "registry": null,
+      "personality": "Bouncy",
+      "image": "assets/media/images/dog-profile-images/dog1.jpeg",
+      "name": "Harvey",
+      "age": 13,
+      "status": "Neutered",
+      "available": "Today",
+      "location": "Philadelphia, PA",
+      "tags": ["Friendly", "Good with Children"],
+      "description": "Your new best friend is here to stay. Meet Harvey, a charming Bulldog puppy who’s ready to take on the world. Harvey sports a bouncy personality and carries a beautiful white coat. In addition, Harvey will arrive healthy, loved, and dog friendly. We've poured ourselves into raising this little gem and promise you a puppy coming from parents of charismatic and dignified personalities. If you’re browsing puppies for sale in Philadelphia, be sure to check out this charming little pup. We are experienced in shipping and can arrange details to get your puppy safely home if you’re not already in Philadelphia. We take pride and joy in raising high quality dogs. Give us a call today at 0838844332 and we’d love to answer any of your questions."
+    },
+    {
+      "id": 2,
+      "type": "dog",
+      "breed": "Golden Retriever",
+      "gener": "female",
+      "registry": "ACA",
+      "personality": "Loyal",
+      "image": "assets/media/images/dog-profile-images/dog2.jpeg",
+      "name": "Lily",
+      "age": 8,
+      "status": "Neutered",
+      "available": "Today",
+      "location": "Toronto, Canada",
+      "tags": ["Lovely", "Great with Other dogs"],
+      "description": "Meet Lily, a loyal Golden Retriever who made a first debut into the world on 09/12/2011. Straight from Toronto, Canada, this little Golden Retriever puppy for sale has been raised on love and will arrive at your front door energetic, loved, and microchipped. Lily flashes a dashing golden coat and is ready to make you smile. At the core, Lily sports a calm personality and can make a home nearly anywhere, provided there is lots of love and a healthy dose of exercise. We are experienced in shipping and look forward to getting Lily safely into her new home. It’s our pleasure to provide elite puppies who are sure to bring years of joy. To make this Golden Retriever puppy yours, or if you have any questions, call us today at 9995487654."
+    },
+    {
+      "id": 3,
+      "type": "dog",
+      "breed": "Schnauser",
+      "gender": "Female",
+      "registry": "Pedigree",
+      "personality": "Tired",
+      "image": "assets/media/images/dog-profile-images/dog3.jpeg",
+      "name": "Buddy",
+      "age": 2,
+      "status": "Intact",
+      "location": "Dublin, Ireland",
+      "tags": ["Friendly", "Lazy"],
+      "description": "Arf! I'm Buddy, a ready-to-please female Schnauzer puppy. Bring me home today and I'll bring you heaps of joy. I fling a dashing multi-colored coat and was born to parents of devoted and smart personalities. I am great with kids and will arrive home child friendly, handled daily, and pre spoiled. If you call me yours and train me well, I’ll be your new best friend ready to join in whatever you are up to. While I first entered the world on 22/07/2017 and was born in Dublin, Ireland, you can either pick me up or I can be shipped straight to you with love. Let's start making memories together! My master works hard to provide quality puppies for sale in Dublin, Ireland and is happy to answer any questions you may have. Call today: 5682218975."
+    },
+    {
+      "id": 4,
+      "type": "dog",
+      "breed": "Poodle",
+      "gender": "Male",
+      "registry": null,
+      "personality": "Crazy",
+      "image": "assets/media/images/dog-profile-images/dog4.jpeg",
+      "name": "Jackson",
+      "age": 13,
+      "status": "Neutered",
+      "location": "El Paso, Texas",
+      "tags": ["Friendly", "Good with Children"],
+      "description": "Jackson is a relaxed Poodle puppy sporting a family-oriented personality straight to the core! Jackson loves to cuddle, play and catch puppy snoozes. Whether it’s joining a rambunctious family or coming along side an active single, Jackson is sure to add a dose of fun. Born in El Paso, Texas, Jackson can be shipped straight to your front door with a whole lot of love. In addition, Jackson will arrive home pet friendly, family raised, and groomed. The proud puppy parents share lively and vivacious personalities. In addition, Jackson wears a stunning brindle coat and is a winsome little fur-ball. Welcome Jackson home before he is gone. We’re working hard to provide quality puppies for sale in El Paso, Texas who will bring years of joy to new pupper families. To make Jackson yours, or if you have further questions, contact us today at: 5719703443."
+    },
+    {
+      "id": 5,
+      "type": "dog",
+      "breed": "Poodle",
+      "gender": "Female",
+      "registry": null,
+      "personality": "Lovable",
+      "image": "assets/media/images/dog-profile-images/dog5.jpeg",
+      "name": "Lucky",
+      "age": 8,
+      "status": "Intact",
+      "location": "Vancouver, British Columbia",
+      "tags": ["Friendly", "Good with Other dogs"],
+      "description": "Pick me only if you're ready for loads of fun. I'm Lucky, a bright Poodle puppy. My coat is a stunning brindle and I first said hello to the world on 1/010/2011. My parents carry noble and spunky personalities and I’m sweet right to the core. You can count on me for a friendly wag, a happy hello and a kiss on the cheek. I'll arrive home clean, good natured, vaccinated, and ready to bring you heaps of joy. While I’m originally from Vancouver, British Columbia, I can be shipped with love right to your front door. I'm waiting. To welcome me home, call my master at 4328790543."
+    },
+    {
+      "id": 6,
+      "type": "dog",
+      "breed": "Setter",
+      "gender": "Male",
+      "registry": "KRC",
+      "personality": "Regal",
+      "image": "assets/media/images/dog-profile-images/dog6.jpeg",
+      "name": "Piper",
+      "age": 3,
+      "status": "Intact",
+      "location": "Augusto, Maine",
+      "tags": ["Friendly", "Lazy"],
+      "description": "Piper is a fluffy female Irish Setter puppy for sale in Augusto, Maine. Piper loves to snuggle, romp, and catch puppy snoozes. Make Piper a member of your family and she will join right in on the fun. Or pair Piper alongside an active single and discover a loving companion. Plus, Piper flaunts a beautiful tuxedo coat and comes from parents of proud and sassy personalities. Make Piper yours and she will arrive at your door registrable, pet friendly, and socialized. We are delighted to present elite Irish Setter puppies and strive to match them with loving homes. If you’re ready for a bundle of cuteness, or if you have additional questions, call us today at 3178692345."
+    },
+    {
+      "id": 7,
+      "type": "cat",
+      "breed": "Tabby",
+      "gender": "Male",
+      "registry": "AKC",
+      "personality": "Rude",
+      "image": "assets/media/images/cat-profile-images/cat1.jpeg",
+      "name": "Princess",
+      "age": 13,
+      "status": "Neutered",
+      "location": "Augusto, Maine",
+      "tags": ["Friendly", "Good with Children"],
+      "description": "Your new best friend is here to stay. Meet Princess, a charming Tabby who’s ready to take on the world. Princess sports a bouncy personality and carries a beautiful white coat. In addition, Princess will arrive healthy, loved, and cat friendly. We've poured ourselves into raising this little gem and promise you a puppy coming from parents of charismatic and dignified personalities. If you’re browsing puppies for sale in Augusto, Maine, be sure to check out this charming little pup. We are experienced in shipping and can arrange details to get your kitty safely home if you’re not already in Augusto, Maine. We take pride and joy in raising high quality cats. Give us a call today at 0838844332 and we’d love to answer any of your questions."
+    },
+    {
+      "id": 8,
+      "type": "cat",
+      "image": "assets/media/images/cat-profile-images/cat2.jpeg",
+      "name": "Martha",
+      "age": 8,
+      "status": "Neutered",
+      "tags": ["Friendly", "Good with Other dogs"]
+    },
+    {
+      "id": 9,
+      "type": "cat",
+      "image": "assets/media/images/cat-profile-images/cat3.jpeg",
+      "name": "Champ",
+      "age": 2,
+      "status": "Intact",
+      "tags": ["Friendly", "Lazy"]
+    },
+    {
+      "id": 10,
+      "type": "cat",
+      "image": "assets/media/images/cat-profile-images/cat4.jpeg",
+      "name": "Rex",
+      "age": 13,
+      "status": "Intact",
+      "tags": ["Friendly", "Good with Children"]
+    },
+    {
+      "id": 11,
+      "type": "cat",
+      "image": "assets/media/images/cat-profile-images/cat5.jpeg",
+      "name": "Clancy",
+      "age": 8,
+      "status": "Neutered",
+      "tags": ["Friendly", "Good with Other dogs"]
+    },
+    {
+      "id": 12,
+      "type": "cat",
+      "image": "assets/media/images/cat-profile-images/cat6.jpeg",
+      "name": "Stud Muffin",
+      "age": 2,
+      "status": "Intact",
+      "tags": ["Friendly", "Lazy"]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+@import '../../../../../styles/global/fonts';
+@import '../../../../../styles/global/colours';
+
+h1 {
+    font-family: $fontHeaderStack;
+}
+
+.nav-links {
+    width: 100%;
+    height: 80px;
+    border-bottom: 5px solid $main-brand-color;
+    display: block;
+    padding: 10px 40px;
+
+    ul {
+        text-align: center;
+        font-family: $fontTitleStack;
+        float: right;
+        text-decoration: none;
+        
+        li {
+            display: inline;
+            text-decoration: none;
+
+            a {
+                width: 100%;
+                height: 100%;
+                padding: 20px 40px;
+                color:$main-dark-color;
+                font-family: $fontBodyStack;
+                text-decoration: none;
+
+                &:hover {
+                    border-radius: 5px;
+                    background-color: lighten($color: gray, $amount: 40);
+                }
+            }
+        }
+
+        button {
+            background-color: transparent;
+            padding: 10px 10px;
+            font-size: 16px;
+            border: 5px solid $main-dark-shade;
+            border-radius: 5px;
+            width: 150px;
+
+            &:hover {
+                background-color: $main-dark-shade;
+            }
+        }
+    }
+}
+
