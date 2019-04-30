@@ -1,14 +1,12 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'filterAnimals'
+  name: 'filterAnimals',
+  pure: false
 })
 export class FilterAnimalsPipe implements PipeTransform {
 
-  transform(animals: any[], searchCriterion: any[]): any {
-
-    console.log('Search criterian: ', searchCriterion);
-    console.log('Animals criterian: ', animals);
+  transform(animals, searchCriterion: any[]): any {
 
     if (!animals) {
       return [];
@@ -18,7 +16,6 @@ export class FilterAnimalsPipe implements PipeTransform {
       return animals;
     }
 
-    return animals.filter(animal => animal.type === searchCriterion);
-
+    return animals.filter(animal => animal.type === searchCriterion.toString());
   }
 }
