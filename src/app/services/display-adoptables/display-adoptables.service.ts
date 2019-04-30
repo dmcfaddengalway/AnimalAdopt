@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { Animal } from '../../models/animal';
 import { Observable } from 'rxjs';
-
 
 @Injectable({
   providedIn: 'root'
@@ -21,7 +19,7 @@ export class DisplayAdoptablesService {
     return this.httpClient.get(this.baseUrl + '/displayAnimals/' + `${id}`);
   }
 
-  public getAnimals() {
+  public getAnimals(): Observable<any> {
     return this.httpClient.get(this.baseUrl + '/displayAnimals');
   }
 }

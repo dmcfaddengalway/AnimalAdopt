@@ -10,7 +10,7 @@ import { ProfileSquaresComponent } from '../profile-squares/profile-squares.comp
 })
 export class FiltersComponent implements OnInit {
 
-  types = ['Dogs', 'Cats'];
+  types = ['Dog', 'Cat'];
   ages = ['Puppy', 'Young Adult', 'Adult', 'Senior'];
   breeds = ['Boxer', 'Doodle', 'German Shepard', 'Great Dane', 'Whippet'];
   neuterStatus = ['Neutered', 'Intact'];
