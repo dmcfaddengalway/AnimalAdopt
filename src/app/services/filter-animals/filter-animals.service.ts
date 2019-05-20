@@ -9,11 +9,7 @@ export class FilterAnimalsService {
   public filterByBreed(animals: Animal[], type: string) {
     console.log('2: ', animals);
 
-    if (!animals) {
-      return [];
-    }
-
-    if (!type) {
+    if (!animals.length || !type) {
       return animals;
     }
 

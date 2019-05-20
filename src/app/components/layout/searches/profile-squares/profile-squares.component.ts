@@ -1,4 +1,4 @@
-import { Component, OnInit, NgZone } from '@angular/core';
+import { Component, OnInit, NgZone, ChangeDetectionStrategy } from '@angular/core';
 
 import { DisplayAdoptablesService } from 'src/app/services/display-adoptables/display-adoptables.service';
 import { FilterAnimalsService } from 'src/app/services/filter-animals/filter-animals.service';
@@ -8,7 +8,8 @@ import { AvailableStates } from '../../../constants/view-states.constants';
 @Component({
   selector: 'app-profile-squares',
   templateUrl: './profile-squares.component.html',
-  styleUrls: ['./profile-squares.component.scss']
+  styleUrls: ['./profile-squares.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Default
 })
 export class ProfileSquaresComponent implements OnInit {
 
@@ -17,21 +18,20 @@ export class ProfileSquaresComponent implements OnInit {
   public animalsToShow: Animal[];
   public loading = false;
   public ViewStates = AvailableStates;
-  ngZone: any;
 
   constructor(private displayAdoptablesService: DisplayAdoptablesService,
               private filterAnimalsService: FilterAnimalsService,
-              private zone: NgZone
              ) {
 
   }
 
   public ngOnInit() {
     this.showAnimals();
+    this.loading = true;
   }
 
-  public animalsTrackByFn(index: number, item: Animal): string {
-    return item.name;
+  public animalsTrackByFn(index: number, item: Animal): number {
+    return item.id;
   }
 
   public adoptableState(): AvailableStates {
@@ -58,9 +58,7 @@ export class ProfileSquaresComponent implements OnInit {
 
   public searchAnimals(filter: string): void {
     this.filterCriteria = filter;
-    this.zone.run(() => {
-      this.showAnimals();
-    });
+    this.showAnimals();
   }
 
   public getAnimalsToDisplay(): Animal[] {
