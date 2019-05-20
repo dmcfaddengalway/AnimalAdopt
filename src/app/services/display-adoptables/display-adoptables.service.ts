@@ -10,7 +10,6 @@ import { Observable } from 'rxjs';
 })
 export class DisplayAdoptablesService {
 
-  animals = [];
   baseUrl = 'http://localhost:3000';
 
   constructor(private httpClient: HttpClient) {

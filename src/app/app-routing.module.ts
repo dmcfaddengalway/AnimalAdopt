@@ -8,11 +8,11 @@ import { SignupComponent } from './components/auth/signup/signup.component';
 import { PageNotFoundComponent } from './components/layout/page-not-found/page-not-found.component';
 import { DisplayAnimalsComponent } from './components/layout/searches/display-animals/display-animals.component';
 import { AnimalProfileComponent } from './components/layout/searches/animal-profile-component/animal-profile.component';
-import { UserPortalComponent } from './components/auth/user-portal/user-portal.component';
-import { ProfileViewComponent } from './components/auth/profile-view/profile-view.component';
-import { ProfilePasswordComponent } from './components/auth/profile-password/profile-password.component';
-import { ContactDetailsComponent } from './components/auth/contact-details/contact-details.component';
-import { DataDownloadComponent } from './components/auth/data-download/data-download.component';
+import { UserPortalComponent } from './components/auth/profile/user-portal/user-portal.component';
+import { ProfileViewComponent } from './components/auth/profile/profile-view/profile-view.component';
+import { ProfilePasswordComponent } from './components/auth/profile/profile-password/profile-password.component';
+import { ContactDetailsComponent } from './components/auth/profile/contact-details/contact-details.component';
+import { DataDownloadComponent } from './components/auth/profile/data-download/data-download.component';
 
 const routes: Routes = [
   {
@@ -45,7 +45,7 @@ const routes: Routes = [
       children: [
         {
           path: '',
-          component: UserPortalComponent
+          component: ProfileViewComponent
         },
         {
           path: 'profileView',

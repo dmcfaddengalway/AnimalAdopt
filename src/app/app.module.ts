@@ -32,11 +32,11 @@ import { FiltersComponent } from './components/layout/searches/filters/filters.c
 import { ProfileSquaresComponent } from './components/layout/searches/profile-squares/profile-squares.component';
 import { AnimalProfileComponent } from './components/layout/searches/animal-profile-component/animal-profile.component';
 import { FilterAnimalsPipe } from './pipes/filter-animals.pipe';
-import { UserPortalComponent } from './components/auth/user-portal/user-portal.component';
-import { ProfileViewComponent } from './components/auth/profile-view/profile-view.component';
-import { ProfilePasswordComponent } from './components/auth/profile-password/profile-password.component';
-import { ContactDetailsComponent } from './components/auth/contact-details/contact-details.component';
-import { DataDownloadComponent } from './components/auth/data-download/data-download.component';
+import { UserPortalComponent } from './components/auth/profile/user-portal/user-portal.component';
+import { ProfileViewComponent } from './components/auth/profile/profile-view/profile-view.component';
+import { ProfilePasswordComponent } from './components/auth/profile/profile-password/profile-password.component';
+import { ContactDetailsComponent } from './components/auth/profile/contact-details/contact-details.component';
+import { DataDownloadComponent } from './components/auth/profile/data-download/data-download.component';
 
 @NgModule({
   declarations: [
