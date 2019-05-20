@@ -8,6 +8,11 @@ import { SignupComponent } from './components/auth/signup/signup.component';
 import { PageNotFoundComponent } from './components/layout/page-not-found/page-not-found.component';
 import { DisplayAnimalsComponent } from './components/layout/searches/display-animals/display-animals.component';
 import { AnimalProfileComponent } from './components/layout/searches/animal-profile-component/animal-profile.component';
+import { UserPortalComponent } from './components/auth/user-portal/user-portal.component';
+import { ProfileViewComponent } from './components/auth/profile-view/profile-view.component';
+import { ProfilePasswordComponent } from './components/auth/profile-password/profile-password.component';
+import { ContactDetailsComponent } from './components/auth/contact-details/contact-details.component';
+import { DataDownloadComponent } from './components/auth/data-download/data-download.component';
 
 const routes: Routes = [
   {
@@ -33,6 +38,36 @@ const routes: Routes = [
   {
     path: 'displayAnimals',
     component: DisplayAnimalsComponent
+  },
+  {
+    path: 'portal',
+    component: UserPortalComponent,
+      children: [
+        {
+          path: '',
+          component: UserPortalComponent
+        },
+        {
+          path: 'profileView',
+          component: ProfileViewComponent
+        },
+        {
+          path: 'profilePassword',
+          component: ProfilePasswordComponent
+        },
+        {
+          path: 'contactDetails',
+          component: ContactDetailsComponent
+        },
+        {
+          path: 'dataDownload',
+          component: DataDownloadComponent
+        },
+        {
+          path: '**',
+          component: UserPortalComponent
+        }
+      ]
   },
   {
     path: 'about',

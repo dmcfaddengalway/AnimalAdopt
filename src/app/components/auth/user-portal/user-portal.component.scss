@@ -1,0 +1,37 @@
+@import '../../../../styles/global/colours';
+@import '../../../../styles/global/fonts';
+@import '../../../../styles/global/mixins';
+
+.userHightlightArea {
+    display: block;
+    height: auto;
+    width: 80%;
+    margin: 80px auto;
+
+    .userBox {
+      width: 20%;
+      float: left;
+
+      .optionsBox {
+        border-left: 2px solid gray;
+        border-right: 2px solid gray;
+        border-top: 2px solid gray;
+        border-radius: 2px;
+
+        .optionItems {
+          border-bottom: 2px solid gray;
+          // border-top: 2px solid gray;
+          padding: 15px;
+        }
+
+      }
+
+    }
+
+    .childOptions {
+      display: block;
+      height: auto;
+      width: 80%;
+      float: right;
+    }
+}

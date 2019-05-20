@@ -47,7 +47,7 @@ export class LoginComponent implements OnInit {
 
   signInWithGithub() {
     if (this.user) {
-      this.router.navigate(['/home']);
+      this.router.navigate(['/portal/profileView']);
     } else {
       return this.firebaseAuth.auth.signInWithPopup(
         new firebase.auth.GithubAuthProvider()
@@ -57,7 +57,7 @@ export class LoginComponent implements OnInit {
 
   signInWithTwitter() {
     if (this.user) {
-      this.router.navigate(['/home']);
+      this.router.navigate(['/portal/profileView']);
     } else {
       return this.firebaseAuth.auth.signInWithPopup(
         new firebase.auth.TwitterAuthProvider()
@@ -67,7 +67,7 @@ export class LoginComponent implements OnInit {
 
    signInWithGoogle() {
     if (this.user) {
-      this.router.navigate(['/home']);
+      this.router.navigate(['/portal/profileView']);
     } else {
       return this.firebaseAuth.auth.signInWithPopup(
         new firebase.auth.GoogleAuthProvider()
@@ -86,7 +86,7 @@ export class LoginComponent implements OnInit {
   logout() {
     this.firebaseAuth.auth.signOut()
       .then((res) => this.router.navigate(['/login']))
-      .catch((error) => this.router.navigate(['/page-not-found']))
+      .catch((error) => this.router.navigate(['/page-not-found']));
   }
 
 }
