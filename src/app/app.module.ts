@@ -31,7 +31,6 @@ import { DisplayAnimalsComponent } from './components/layout/searches/display-an
 import { FiltersComponent } from './components/layout/searches/filters/filters.component';
 import { ProfileSquaresComponent } from './components/layout/searches/profile-squares/profile-squares.component';
 import { AnimalProfileComponent } from './components/layout/searches/animal-profile-component/animal-profile.component';
-import { FilterAnimalsPipe } from './pipes/filter-animals.pipe';
 
 @NgModule({
   declarations: [
@@ -52,7 +51,6 @@ import { FilterAnimalsPipe } from './pipes/filter-animals.pipe';
     FiltersComponent,
     ProfileSquaresComponent,
     AnimalProfileComponent,
-    FilterAnimalsPipe
   ],
   imports: [
     BrowserModule,
@@ -73,9 +71,7 @@ import { FilterAnimalsPipe } from './pipes/filter-animals.pipe';
   providers: [
     AuthService,
     DisplayAdoptablesService,
-    FilterAnimalsPipe
   ],
-  exports: [FilterAnimalsPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

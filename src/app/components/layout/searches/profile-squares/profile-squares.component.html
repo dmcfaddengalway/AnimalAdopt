@@ -1,22 +1,28 @@
 <div class="profileHightlightArea">
 
-  <div class="profileBox">
-    
-    <a routerLink="/displayAnimals/{{ animal.id }}" *ngFor="let animal of animals | filterAnimals" class="profile">
-      <div>
-        <div class="profileImage">
-          <img src="{{ animal.image }}">
-        </div>
-      
-        <hr>
+  <div [ngSwitch]="adoptableState()" class="profileBox">
 
-        <div class="profileInfo">
-          <h1>{{ animal.name }}, {{ animal.age }}</h1>
-          <p>{{ animal.tags }}</p>
+    <p *ngSwitchCase="ViewStates.loading">Loading</p>
+    <p *ngSwitchCase="ViewStates.empty">Empty</p>
+
+    <div *ngSwitchCase="ViewStates.loaded">
+
+      <a routerLink="/displayAnimals/{{ animal.id }}" *ngFor="let animal of animalsToShow; trackBy: animalsTrackByFn; index as i" class="profile">
+        <div>
+          <div class="profileImage">
+            <img src="{{ animal.image }}">
+          </div>
+
+          <hr>
+
+          <div class="profileInfo">
+            <h1>{{ animal.name }}, {{ animal.age }}</h1>
+            <p>{{ animal.tags }}</p>
+          </div>
         </div>
-      </div>
-    </a>
-    
+      </a>
+    </div>
 
   </div>
+
 </div>
