@@ -1,0 +1,13 @@
+<div class="custom-selector">
+
+  <i class="fa fa-user"></i>
+  <select>
+    <option *ngFor="let option of optionList">
+      <a routerLink='/portal/profileView'>
+        {{ option }}
+      </a>
+    </option>
+  </select>
+  <i class="fa fa-angle-down"></i>
+
+</div>

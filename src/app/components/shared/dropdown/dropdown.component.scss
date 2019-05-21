@@ -1,0 +1,21 @@
+.custom-selector {
+  position: relative;
+  border: none;
+
+  select {
+    border: none;
+    background: transparent;
+    margin: 12px;
+    -webkit-appearance: button;
+    outline: none;
+
+    select:before {
+      content: '\f358';
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      height: 50px;
+      width: 50px;
+    }
+  }
+}
