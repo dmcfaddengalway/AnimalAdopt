@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import swal from 'sweetalert2';
+import { AuthService } from 'src/app/services/auth/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,11 @@ import swal from 'sweetalert2';
 
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  public isLoggedIn = false;
+
+  constructor(private authService: AuthService) {
+    this.isLoggedIn = authService.isLoggedIn;
+  }
 
   ngOnInit() {
 

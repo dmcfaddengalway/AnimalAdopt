@@ -1,8 +1,27 @@
 <div class="nav-links">
-  <ul>
-    <li><a routerLink='/displayAnimals'>Dogs</a></li>
-    <li><a routerLink='/displayAnimals'>Cats</a></li>
-    <li><a routerLink='/login'>Login</a></li>
-    <li><button routerLink='/signup'>Signup</button></li>
-  </ul>
+
+  <div class="navigation">
+    <ul>
+      <li><a routerLink='/displayAnimals'>Dogs</a></li>
+      <li><a routerLink='/displayAnimals'>Cats</a></li>
+    </ul>
+  </div>
+
+  <div class="controls">
+    <div *ngIf="!isLoggedIn">
+      <ul>
+          <li><a routerLink='/login'>Login</a></li>
+          <li><button routerLink='/signup'>Signup</button></li>
+      </ul>
+    </div>
+
+    <div *ngIf="isLoggedIn" class="profileIcon">
+      <!-- <a routerLink='/portal/profileView'>
+        <i class="fa fa-user"><i class="fa fa-angle-down"></i></i> -->
+        <app-dropdown></app-dropdown>
+      <!-- </a> -->
+    </div>
+
+  </div>
+
 </div>

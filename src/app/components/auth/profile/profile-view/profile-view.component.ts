@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { UserSettingsService } from 'src/app/services/user-settings/user-settings.service';
-import { Observable } from 'rxjs';
 import { User } from 'src/app/models/user.model';
 
 @Component({
@@ -12,14 +10,10 @@ export class ProfileViewComponent implements OnInit {
 
   public user: User[];
 
-  constructor(private userSettingsService: UserSettingsService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.userSettingsService.getUser(8)
-      .subscribe(person => {
-        this.user.push(person);
-        console.log(this.user);
-      });
+
   }
 
 }

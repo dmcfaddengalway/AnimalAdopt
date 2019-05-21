@@ -37,6 +37,7 @@ import { ProfileViewComponent } from './components/auth/profile/profile-view/pro
 import { ProfilePasswordComponent } from './components/auth/profile/profile-password/profile-password.component';
 import { ContactDetailsComponent } from './components/auth/profile/contact-details/contact-details.component';
 import { DataDownloadComponent } from './components/auth/profile/data-download/data-download.component';
+import { DropdownComponent } from './components/shared/dropdown/dropdown.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { DataDownloadComponent } from './components/auth/profile/data-download/d
     ProfileViewComponent,
     ProfilePasswordComponent,
     ContactDetailsComponent,
-    DataDownloadComponent
+    DataDownloadComponent,
+    DropdownComponent
   ],
   imports: [
     BrowserModule,

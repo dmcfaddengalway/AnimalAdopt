@@ -14,6 +14,8 @@ import { ProfilePasswordComponent } from './components/auth/profile/profile-pass
 import { ContactDetailsComponent } from './components/auth/profile/contact-details/contact-details.component';
 import { DataDownloadComponent } from './components/auth/profile/data-download/data-download.component';
 
+import { AuthGuard } from './guards/auth.guard';
+
 const routes: Routes = [
   {
     path: '',
@@ -21,7 +23,8 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'login',
@@ -33,39 +36,48 @@ const routes: Routes = [
   },
   {
     path: 'displayAnimals/:id',
-    component: AnimalProfileComponent
+    component: AnimalProfileComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'displayAnimals',
-    component: DisplayAnimalsComponent
+    component: DisplayAnimalsComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'portal',
     component: UserPortalComponent,
+    canActivate: [AuthGuard],
       children: [
         {
           path: '',
-          component: ProfileViewComponent
+          component: ProfileViewComponent,
+          canActivate: [AuthGuard]
         },
         {
           path: 'profileView',
-          component: ProfileViewComponent
+          component: ProfileViewComponent,
+          canActivate: [AuthGuard]
         },
         {
           path: 'profilePassword',
-          component: ProfilePasswordComponent
+          component: ProfilePasswordComponent,
+          canActivate: [AuthGuard]
         },
         {
           path: 'contactDetails',
-          component: ContactDetailsComponent
+          component: ContactDetailsComponent,
+          canActivate: [AuthGuard]
         },
         {
           path: 'dataDownload',
-          component: DataDownloadComponent
+          component: DataDownloadComponent,
+          canActivate: [AuthGuard]
         },
         {
           path: '**',
-          component: UserPortalComponent
+          component: UserPortalComponent,
+          canActivate: [AuthGuard]
         }
       ]
   },

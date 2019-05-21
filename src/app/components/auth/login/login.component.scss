@@ -12,19 +12,11 @@ html {
   width: 100%;
 }
 
-.dogVideo {
-  position: fixed;
-  right: 0; 
-  bottom: 0;
-  width: 110%; 
-  height: 120%;
-  z-index: -100;
-}
-
 .loginBox {
   display: flex;
   align-items: center;
   height: 100vh;
+  background-color: black;
 }
 
 .loginCard {
