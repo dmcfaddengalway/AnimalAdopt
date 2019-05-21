@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 
 import { Animal } from '../../models/animal';
 import { Observable } from 'rxjs';
@@ -19,8 +19,21 @@ export class DisplayAdoptablesService {
     return this.httpClient.get<Animal>(this.baseUrl + '/displayAnimals/' + `${id}`);
   }
 
-  public getAllAnimals(): Observable<Animal[]> {
+  public getAllAnimals(breedName?: string): Observable<Animal[]> {
     return this.httpClient.get<Animal[]>(this.baseUrl + '/displayAnimals');
+    // .filter(animal => animal.type.toLocaleLowerCase().includes('dog'));
+  }
+
+  public getAllAnimalsWithParams(breedName?: string): Observable<Animal[]> {
+    let params;
+
+    if (breedName) {
+      params = new HttpParams().set('breed', 'Bulldog');
+    } else {
+      params = null;
+    }
+
+    return this.httpClient.get<Animal[]>(this.baseUrl + '/displayAnimals', {params});
       // .filter(animal => animal.type.toLocaleLowerCase().includes('dog'));
   }
 }

@@ -22,11 +22,7 @@
 
       <h1 class="section">Breed</h1>
       <form>
-        <span *ngFor="let breed of breeds; index as i">
-          <input class="checkbox" type="checkbox" id="{{breed}} + ${i}" name="{{breed}}" [checked]="false" (click)="updateFilters(breed)">
-          <label for="{{breed}} + ${i}">{{ breed }}</label>
-          <br>
-        </span>
+        <input (keyup)="updateList()" placeholder="Breed" [(ngModel)]="breedName" [ngModelOptions]="{standalone: true}">
       </form>
 
       <h1 class="section">Neutered</h1>

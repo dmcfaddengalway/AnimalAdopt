@@ -3,7 +3,9 @@ import { Component, OnInit, NgZone, ChangeDetectionStrategy } from '@angular/cor
 import { DisplayAdoptablesService } from 'src/app/services/display-adoptables/display-adoptables.service';
 import { FilterAnimalsService } from 'src/app/services/filter-animals/filter-animals.service';
 import { Animal } from 'src/app/models/animal';
-import { AvailableStates } from '../../../constants/view-states.constants';
+import { AvailableStates } from '../../../constants/available-states.constants';
+
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-profile-squares',
@@ -44,9 +46,9 @@ export class ProfileSquaresComponent implements OnInit {
     }
   }
 
-  public showAnimals(): void {
+  public showAnimals(filter): void {
     this.loading = true;
-    this.displayAdoptablesService.getAllAnimals()
+    this.displayAdoptablesService.getAllAnimalsWithParams(filter)
       .subscribe(animalsReturned => {
         this.allAnimals = animalsReturned;
         this.animalsToShow = this.getAnimalsToDisplay();
@@ -58,7 +60,7 @@ export class ProfileSquaresComponent implements OnInit {
 
   public searchAnimals(filter: string): void {
     this.filterCriteria = filter;
-    this.showAnimals();
+    this.showAnimals(filter);
   }
 
   public getAnimalsToDisplay(): Animal[] {

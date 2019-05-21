@@ -21,7 +21,7 @@
       "id": 2,
       "type": "dog",
       "breed": "Golden Retriever",
-      "gener": "female",
+      "gender": "female",
       "registry": "ACA",
       "personality": "Loyal",
       "image": "assets/media/images/dog-profile-images/dog2.jpeg",
