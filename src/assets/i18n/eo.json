@@ -1,0 +1,10 @@
+{
+  "HOME": {
+    "DOGS": "Hundoj",
+    "CATS": "Katoj"
+  },
+  "COMMON": {
+    "LOGIN": "Login",
+    "SIGNUP": "Signup"
+  }
+}

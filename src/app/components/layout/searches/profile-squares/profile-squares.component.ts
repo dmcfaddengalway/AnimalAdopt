@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { DisplayAdoptablesService } from 'src/app/services/display-adoptables/display-adoptables.service';
 
 import { FilterAnimalsPipe } from '../../../../pipes/filter-animals.pipe';
-import { resolve6 } from 'dns';
 
 @Component({
   selector: 'app-profile-squares',
