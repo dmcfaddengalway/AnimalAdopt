@@ -2,16 +2,16 @@
 
   <div class="navigation">
     <ul>
-      <li><a routerLink='/displayAnimals'>Dogs</a></li>
-      <li><a routerLink='/displayAnimals'>Cats</a></li>
+      <li><a routerLink='/displayAnimals'>{{ 'COMMON.DOGS' | translate }}</a></li>
+      <li><a routerLink='/displayAnimals'>{{ 'COMMON.CATS' | translate }}</a></li>
     </ul>
   </div>
 
   <div class="controls">
     <div *ngIf="!isLoggedIn">
       <ul>
-          <li><a routerLink='/login'>Login</a></li>
-          <li><button routerLink='/signup'>Signup</button></li>
+          <li><a routerLink='/login'>{{ 'COMMON.LOGIN' | translate }}</a></li>
+          <li><button routerLink='/signup'>{{ 'COMMON.SIGNUP' | translate }}</button></li>
       </ul>
     </div>
 

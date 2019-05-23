@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+
+import { InternalisationService } from '../app/services/internalisation/internalisation.service';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +10,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AnimalAdopt';
+  chosenLanguage = 'en';
 
-  constructor() {
-    document.cookie = 'userAppLanguage=en';
+  constructor(protected translateService: TranslateService, protected internalisationService: InternalisationService) {
+    translateService.setDefaultLang('fr');
+    document.cookie = 'userAppLanguage=' + this.internalisationService.setAppLanguage();
+  }
+
+  public switchAppLanguage(languageChoice) {
+    this.chosenLanguage = languageChoice;
   }
 }

@@ -6,7 +6,9 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { AuthService } from './services/auth/auth.service';
 import { DisplayAdoptablesService } from './services/display-adoptables/display-adoptables.service';
@@ -39,6 +41,12 @@ import { ContactDetailsComponent } from './components/auth/profile/contact-detai
 import { DataDownloadComponent } from './components/auth/profile/data-download/data-download.component';
 import { DropdownComponent } from './components/shared/dropdown/dropdown.component';
 import { LanguageComponent } from './components/auth/profile/language/language.component';
+import { InternalisationService } from './services/internalisation/internalisation.service';
+
+// AoT requires an exported function for factories
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, '/assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -82,10 +90,19 @@ import { LanguageComponent } from './components/auth/profile/language/language.c
     }),
     AngularFireModule.initializeApp(environment.firebase, 'angular-auth-firebase'),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      },
+      isolate: true
+    })
   ],
   providers: [
     AuthService,
+    InternalisationService,
     DisplayAdoptablesService,
     FilterAnimalsPipe
   ],
