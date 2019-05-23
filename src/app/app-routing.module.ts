@@ -15,6 +15,7 @@ import { ContactDetailsComponent } from './components/auth/profile/contact-detai
 import { DataDownloadComponent } from './components/auth/profile/data-download/data-download.component';
 
 import { AuthGuard } from './guards/auth.guard';
+import { LanguageComponent } from './components/auth/profile/language/language.component';
 
 const routes: Routes = [
   {
@@ -47,7 +48,6 @@ const routes: Routes = [
   {
     path: 'portal',
     component: UserPortalComponent,
-    canActivate: [AuthGuard],
       children: [
         {
           path: '',
@@ -72,6 +72,11 @@ const routes: Routes = [
         {
           path: 'dataDownload',
           component: DataDownloadComponent,
+          canActivate: [AuthGuard]
+        },
+        {
+          path: 'language',
+          component: LanguageComponent,
           canActivate: [AuthGuard]
         },
         {

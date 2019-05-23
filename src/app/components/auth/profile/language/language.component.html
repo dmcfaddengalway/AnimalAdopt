@@ -1,0 +1,19 @@
+<div class="wrapper">
+
+  <div class="photoAndGeneral">
+
+    <div class="photo">
+
+    </div>
+
+    <div class="general">
+      <h1>Language</h1>
+      <p>You can see the language of your choosing here for the app.</p>
+      <select [(ngModel)]="languageCode" (change)="setLanguage($event.target.value)">
+        <option *ngFor="let language of languages" [value]="language.tag">{{ language.name }}</option>
+      </select>
+    </div>
+
+  </div>
+
+</div>

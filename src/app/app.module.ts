@@ -38,6 +38,7 @@ import { ProfilePasswordComponent } from './components/auth/profile/profile-pass
 import { ContactDetailsComponent } from './components/auth/profile/contact-details/contact-details.component';
 import { DataDownloadComponent } from './components/auth/profile/data-download/data-download.component';
 import { DropdownComponent } from './components/shared/dropdown/dropdown.component';
+import { LanguageComponent } from './components/auth/profile/language/language.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { DropdownComponent } from './components/shared/dropdown/dropdown.compone
     ProfilePasswordComponent,
     ContactDetailsComponent,
     DataDownloadComponent,
-    DropdownComponent
+    DropdownComponent,
+    LanguageComponent
   ],
   imports: [
     BrowserModule,
