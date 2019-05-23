@@ -15,6 +15,7 @@ export class InternalisationService {
   constructor(private cookieService: CookieService, private translateService: TranslateService) {}
 
   public setAppLanguage(): void {
+    this.translateService.setDefaultLang('en');
     this.translateService.use(this.getUserPreferredLanguage());
     console.log(this.getAppLanguage());
   }

@@ -1,10 +1,15 @@
 {
-  "HOME": {
+  "COMMON": {
+    "LOGIN": "Ensaluti",
+    "SIGNUP": "Registrigi",
+    "SEARCH": "Serchi",
     "DOGS": "Hundoj",
     "CATS": "Katoj"
   },
-  "COMMON": {
-    "LOGIN": "Login",
-    "SIGNUP": "Signup"
+  "FORM_FIELDS": {
+    "SUBMIT": "Sendu"
+  },
+  "HOME": {
+    "FIND_NEW_FRIEND": "Trovu vian novan plej bonan amikon"
   }
 }
