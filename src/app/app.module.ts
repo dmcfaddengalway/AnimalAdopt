@@ -24,7 +24,6 @@ import { SignupComponent } from './components/auth/signup/signup.component';
 import { PageNotFoundComponent } from './components/layout/page-not-found/page-not-found.component';
 import { InternalisationService } from './services/internalisation/internalisation.service';
 import { UsersModule } from './components/auth/users.module';
-import { HomeComponent } from './components/layout/home/home.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
