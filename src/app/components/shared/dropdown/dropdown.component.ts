@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Option } from '../../../models/option.model';
 
 @Component({
   selector: 'app-dropdown',
@@ -8,12 +9,26 @@ import { FormControl } from '@angular/forms';
 })
 export class DropdownComponent implements OnInit {
 
-  public optionList = ['Profile', 'Security', 'Contact Details', 'Data Download', 'Language'];
+  public optionList: Option[] = [
+    { name: 'Profile', value: 'profileView'},
+    { name: 'Security', value: 'profilePassword'},
+    { name: 'Contact Details', value: 'contactDetails'},
+    { name: 'Data Download', value: 'dataDownload' },
+    { name: 'Language', value: 'language'}
+  ];
+  public selectedOption: string;
 
-  constructor() { }
+  constructor(private router: Router) {
+
+  }
 
   ngOnInit() {
+    this.selectedOption = 'profileView';
+  }
 
+  public updateSelectedOption(profileOption) {
+    this.selectedOption = profileOption.trim();
+    this.router.navigate([`/portal/${this.selectedOption}`], { queryParamsHandling: 'preserve'});
   }
 
 }

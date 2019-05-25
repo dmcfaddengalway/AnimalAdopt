@@ -47,8 +47,8 @@
             <input type="text" name="name" placeholder="{{ 'FORM_FIELDS.NAME' | translate }}">
             <input type="text" name="email" placeholder="{{ 'FORM_FIELDS.EMAIL' | translate }}">
             <textarea name="message" columns="30" rows="10" placeholder="{{ 'FORM_FIELDS.MESSAGE' | translate }}"></textarea>
-            <button type="submit" value="Submit"
-              [swal]="{ title: 'Submitted', text: 'Your details have been successfuly submitted', type: 'success', confirmButtonText: 'Okay'}">{{ 'FORM_FIELDS.SUBMIT' | translate }}</button>
+            <app-button class="new-button" [buttonType]="buttonType"
+              [swal]="{ title: 'Submitted', text: 'Your details have been successfuly submitted', type: 'success', confirmButtonText: 'Okay'}">{{ 'FORM_FIELDS.SUBMIT' | translate }}</app-button>
           </form>
       </div>
 

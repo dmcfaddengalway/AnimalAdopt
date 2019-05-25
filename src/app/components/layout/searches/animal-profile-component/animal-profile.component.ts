@@ -1,8 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute } from "@angular/router";
 import { HttpClient } from '@angular/common/http';
-
-import { DisplayAdoptablesService } from 'src/app/services/display-adoptables/display-adoptables.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-animal-profile',
@@ -11,9 +9,10 @@ import { DisplayAdoptablesService } from 'src/app/services/display-adoptables/di
 })
 export class AnimalProfileComponent implements OnInit {
 
-  id;
-  animal;
-  baseUrl = 'http://localhost:3000';
+  public buttonType = 'submit';
+  public animal;
+  public id;
+  public baseUrl = 'http://localhost:3000';
 
   constructor(private httpClient: HttpClient, private route: ActivatedRoute) {
 

@@ -11,7 +11,8 @@
     "PRIVACY_POLICY": "Privacy Policy",
     "CONTACT": "Contact",
     "IMPRESSUM": "Impressum",
-    "SPONSORS": "Sponsors"
+    "SPONSORS": "Sponsors",
+    "HOME": "Home"
   },
   "FORM_FIELDS": {
     "EMAIL": "Email address",

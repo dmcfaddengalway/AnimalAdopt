@@ -14,7 +14,8 @@
     <form>
       <input type="text" class="email" placeholder="{{ 'FORM_FIELDS.EMAIL' | translate }}" required>
       <br />
-      <input type="submit" value="{{ 'FORM_FIELDS.SUBMIT' | translate }}" />
+      <app-button
+        [swal]="{ title: 'Submitted', text: 'Your details have been successfuly submitted', type: 'success', confirmButtonText: 'Okay'}">{{ 'FORM_FIELDS.SUBMIT' | translate }}</app-button>
     </form>
 
   </div>

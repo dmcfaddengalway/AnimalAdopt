@@ -1,21 +1,56 @@
+@import '../../../../styles/global/colours';
+@import '../../../../styles/global/fonts';
+@import '../../../../styles/global/mixins';
+
 .custom-selector {
   position: relative;
-  border: none;
+  border: 3px solid $main-dark-shade;
+  border-radius: 2px;
+  height: 100%;
 
-  select {
-    border: none;
-    background: transparent;
-    margin: 12px;
-    -webkit-appearance: button;
-    outline: none;
+  .selectorBox {
+    padding: 12px;
 
-    select:before {
-      content: '\f358';
-      position: absolute;
-      top: 0px;
-      right: 0px;
-      height: 50px;
-      width: 50px;
+    .profile-icon {
+      display: inline-block;
+      width: 10%;
+      margin: 0px;
+      padding: 0px;
+
+      i {
+        margin: 0px;
+        padding: 0px;
+      }
+    }
+
+    .profile-arrow-icon {
+      display: inline-block;
+      width: 10%;
+      margin: 0px;
+      padding: 0px;
+
+      i {
+        margin: 0px;
+        padding: 0px;
+      }
+    }
+
+    select {
+      display: inline-block;
+      width: 80%;
+      padding: 0px;
+      border: none;
+      background: transparent;
+      -webkit-appearance: button;
+
+      select:before {
+        content: '\f358';
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        height: 50px;
+        width: 50px;
+      }
     }
   }
 }

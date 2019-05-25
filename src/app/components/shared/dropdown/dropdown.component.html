@@ -1,13 +1,21 @@
 <div class="custom-selector">
 
-  <i class="fa fa-user"></i>
-  <select>
-    <option *ngFor="let option of optionList">
-      <a routerLink="/portal/profileView/"`${option}`>
-        {{ option }}
-      </a>
-    </option>
-  </select>
-  <i class="fa fa-angle-down"></i>
+  <div class=selectorBox>
+
+    <div class=profile-icon>
+      <i class="fa fa-user"></i>
+    </div>
+
+    <select [(ngModel)]="selectedOption" (ngModelChange)="updateSelectedOption($event)">
+      <option *ngFor="let option of optionList" [ngValue]="option.value">
+        {{ option.name }}
+      </option>
+    </select>
+
+    <div class="profile-arrow-icon">
+      <i class="fa fa-angle-down"></i>
+    </div>
+
+  </div>
 
 </div>

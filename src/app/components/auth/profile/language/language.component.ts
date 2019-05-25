@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { InternalisationService } from '../../../../services/internalisation/internalisation.service';
+import { Option } from '../../../../models/option.model';
 
 @Component({
   selector: 'app-language',
@@ -8,11 +9,11 @@ import { InternalisationService } from '../../../../services/internalisation/int
 })
 export class LanguageComponent implements OnInit {
 
-  public languages = [
-    { name: 'English', tag: 'en', default: true},
-    { name: 'Esperanto', tag: 'eo' },
-    { name: 'French', tag: 'fr' },
-    { name: 'Spanish', tag: 'es' }
+  public languages: Option[] = [
+    { name: 'English', value: 'en'},
+    { name: 'Esperanto', value: 'eo' },
+    { name: 'French', value: 'fr' },
+    { name: 'Spanish', value: 'es' }
   ];
   public languageCode: string;
 
@@ -20,6 +21,7 @@ export class LanguageComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.languageCode = 'en';
   }
 
   public setLanguage() {

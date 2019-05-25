@@ -17,31 +17,13 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/layout/generic/header/header.component';
-import { FooterComponent } from './components/layout/generic/footer/footer.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { AboutComponent } from './components/legal/about/about.component';
 import { PrivacyPolicyComponent } from './components/legal/privacy-policy/privacy-policy.component';
-import { HomeComponent } from './components/layout/home/home.component';
 import { SignupComponent } from './components/auth/signup/signup.component';
 import { PageNotFoundComponent } from './components/layout/page-not-found/page-not-found.component';
-import { DogHighlightComponent } from './components/layout/home/dog-highlight/dog-highlight.component';
-import { CatHighlightComponent } from './components/layout/home/cat-highlight/cat-highlight.component';
-import { FeaturedAnimalComponent } from './components/layout/home/featured-animal/featured-animal.component';
-import { NewsletterComponent } from './components/layout/home/newsletter/newsletter.component';
-import { DisplayAnimalsComponent } from './components/layout/searches/display-animals/display-animals.component';
-import { FiltersComponent } from './components/layout/searches/filters/filters.component';
-import { ProfileSquaresComponent } from './components/layout/searches/profile-squares/profile-squares.component';
-import { AnimalProfileComponent } from './components/layout/searches/animal-profile-component/animal-profile.component';
-import { FilterAnimalsPipe } from './pipes/filter-animals.pipe';
-import { UserPortalComponent } from './components/auth/profile/user-portal/user-portal.component';
-import { ProfileViewComponent } from './components/auth/profile/profile-view/profile-view.component';
-import { ProfilePasswordComponent } from './components/auth/profile/profile-password/profile-password.component';
-import { ContactDetailsComponent } from './components/auth/profile/contact-details/contact-details.component';
-import { DataDownloadComponent } from './components/auth/profile/data-download/data-download.component';
-import { DropdownComponent } from './components/shared/dropdown/dropdown.component';
-import { LanguageComponent } from './components/auth/profile/language/language.component';
 import { InternalisationService } from './services/internalisation/internalisation.service';
+import { UsersModule } from './components/auth/users.module';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -51,36 +33,18 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
     LoginComponent,
     AboutComponent,
     PrivacyPolicyComponent,
-    HomeComponent,
     SignupComponent,
     PageNotFoundComponent,
-    DogHighlightComponent,
-    CatHighlightComponent,
-    FeaturedAnimalComponent,
-    NewsletterComponent,
-    DisplayAnimalsComponent,
-    FiltersComponent,
-    ProfileSquaresComponent,
-    AnimalProfileComponent,
-    FilterAnimalsPipe,
-    UserPortalComponent,
-    ProfileViewComponent,
-    ProfilePasswordComponent,
-    ContactDetailsComponent,
-    DataDownloadComponent,
-    DropdownComponent,
-    LanguageComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    UsersModule,
     AngularFontAwesomeModule,
     SweetAlert2Module.forRoot({
       buttonsStyling: true,
@@ -104,9 +68,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     AuthService,
     InternalisationService,
     DisplayAdoptablesService,
-    FilterAnimalsPipe
   ],
-  exports: [FilterAnimalsPipe],
+  exports: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

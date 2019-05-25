@@ -11,8 +11,7 @@
     }
 }
 
-@mixin button($width, $height, $fontSize, $border, $borderRadius, $hoverBackground) {
-    width: $width;
+@mixin button($height, $fontSize, $border, $borderRadius, $hoverBackground) {
     height: $height;
     font-size: $fontSize;
     border: $border;

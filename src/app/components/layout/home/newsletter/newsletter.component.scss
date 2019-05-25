@@ -20,7 +20,7 @@
                 margin: 20px auto;
                 font-size: 8rem;
             }
-            
+
         }
 
     }
@@ -31,7 +31,7 @@
         margin-bottom: 20px;
         height: auto;
     }
-    
+
     h2 {
         font-family: $fontSubheaderStack;
         font-size: 1.5rem;
@@ -52,7 +52,8 @@
         border: none;
         background-color: transparent;
         padding: 15px;
-        @include button(200px, null, 1.5rem, 5px solid $main-dark-shade, 5px, $main-dark-shade);
+        width: 200px;
+        @include button(null, 1.5rem, 5px solid $main-dark-shade, 5px, $main-dark-shade);
 
         &:hover {
             background-color: $main-dark-shade;
