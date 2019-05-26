@@ -26,11 +26,11 @@
     "FIND_NEW_FRIEND": "Find your new best friend"
   },
   "FILTERS": {
-    "ANIMAL": "Animal",
+    "ANIMALS": "Animals",
     "AGE": "Age",
-    "BREED": "Breed",
+    "BREEDS": "Breeds",
     "STATUS": "Status",
     "SIZE": "Size",
-    "CARE_LEVEL": "Care Level"
+    "MAINTENANCE_LEVEL": "Maintenance Level"
   }
 }

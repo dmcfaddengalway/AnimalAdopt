@@ -26,11 +26,11 @@
     "FIND_NEW_FRIEND": "Trovu vian novan plej bonan amikon"
   },
   "FILTERS": {
-    "ANIMAL": "Besto",
+    "ANIMALS": "Bestoj",
     "AGE": "Aĝo",
     "BREED": "Reproduktiĝas",
     "STATUS": "Statuso",
     "SIZE": "Grandeco",
-    "CARE_LEVEL": "Nivelo de bontenado"
+    "MAINTENANCE_LEVEL": "Nivelo de bontenado"
   }
 }

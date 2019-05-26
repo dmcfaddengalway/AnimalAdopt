@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FilterAnimalsPipe } from '../../../../pipes/filter-animals.pipe';
 import { ProfileSquaresComponent } from '../profile-squares/profile-squares.component';
+import { Option } from 'src/app/models/option.model';
 
 @Component({
   selector: 'app-filters',
@@ -10,12 +11,34 @@ import { ProfileSquaresComponent } from '../profile-squares/profile-squares.comp
 })
 export class FiltersComponent implements OnInit {
 
-  types = ['Dogs', 'Cats'];
-  ages = ['Puppy', 'Young Adult', 'Adult', 'Senior'];
-  breeds = ['Boxer', 'Doodle', 'German Shepard', 'Great Dane', 'Whippet'];
-  neuterStatus = ['Neutered', 'Intact'];
-  sizes = ['Small', 'Medium', 'Large', 'Extra Large'];
-  maintenance = ['Lazy', 'Active'];
+  public types: Option[] = [
+    { name: 'Dogs', value: 'dog' },
+    { name: 'Cats', value: 'cat' }
+  ];
+
+  public ages: Option[] = [
+    { name: 'Puppy', value: 'puppy' },
+    { name: 'Young Adult', value: 'young-adult' },
+    { name: 'Adult', value: 'adult' },
+    { name: 'Senior', value: 'senior' },
+  ];
+
+  public neuterStatus: Option[] = [
+    { name: 'Neutered', value: 'neutered' },
+    { name: 'Intact', value: 'intact' }
+  ];
+
+  public sizes: Option[] = [
+    { name: 'Small', value: 'small' },
+    { name: 'Medium', value: 'medium' },
+    { name: 'Large', value: 'large' },
+    { name: 'Extra Large', value: 'extra-large' },
+  ];
+
+  public maintenance: Option[] = [
+    { name: 'Lazy', value: 'lazy' },
+    { name: 'Active', value: 'active' }
+  ];
 
   constructor(private profileSquares: ProfileSquaresComponent) { }
 
