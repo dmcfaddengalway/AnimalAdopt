@@ -17,7 +17,6 @@ export class InternalisationService {
   public setAppLanguage(): void {
     this.translateService.setDefaultLang('en');
     this.translateService.use(this.getUserPreferredLanguage());
-    console.log(this.getAppLanguage());
   }
 
   public getAppLanguage() {

@@ -41,11 +41,11 @@ const routes: Routes = [
     component: AnimalProfileComponent,
     canActivate: [AuthGuard]
   },
-  // {
-  //   path: 'displayAnimals',
-  //   component: DisplayAnimalsComponent,
-  //   canActivate: [AuthGuard]
-  // },
+  {
+    path: 'displayAnimals',
+    component: DisplayAnimalsComponent,
+    canActivate: [AuthGuard]
+  },
   {
     path: 'portal',
     component: UserPortalComponent,

@@ -25,7 +25,6 @@ export class LanguageComponent implements OnInit {
   }
 
   public setLanguage() {
-    console.log(this.languageCode);
     document.cookie = 'userAppLanguage=' + this.languageCode;
     this.internalisationService.setAppLanguage();
   }
