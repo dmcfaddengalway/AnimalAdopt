@@ -17,7 +17,7 @@ export class FiltersComponent implements OnInit {
   sizes = ['Small', 'Medium', 'Large', 'Extra Large'];
   maintenance = ['Lazy', 'Active'];
 
-  constructor(public filterAnimalsPipe: FilterAnimalsPipe, private profileSquares: ProfileSquaresComponent) { }
+  constructor(private profileSquares: ProfileSquaresComponent) { }
 
   ngOnInit() {
   }

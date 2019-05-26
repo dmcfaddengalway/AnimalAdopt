@@ -41,11 +41,11 @@ const routes: Routes = [
     component: AnimalProfileComponent,
     canActivate: [AuthGuard]
   },
-  {
-    path: 'displayAnimals',
-    component: DisplayAnimalsComponent,
-    canActivate: [AuthGuard]
-  },
+  // {
+  //   path: 'displayAnimals',
+  //   component: DisplayAnimalsComponent,
+  //   canActivate: [AuthGuard]
+  // },
   {
     path: 'portal',
     component: UserPortalComponent,
@@ -102,7 +102,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 export class UsersRoutingModule { }

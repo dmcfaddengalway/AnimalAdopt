@@ -3,7 +3,7 @@
   <div class="general">
     <h1>Language</h1>
     <p>You can see the language of your choosing here for the app.</p>
-    <select [(ngModel)]="languageCode" (change)="setLanguage($event.target.value)">
+    <select [(ngModel)]="languageCode" (change)="setLanguage($event)">
       <option *ngFor="let language of languages" [value]="language.value">{{ language.name }}</option>
     </select>
   </div>

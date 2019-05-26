@@ -24,6 +24,11 @@ import { SignupComponent } from './components/auth/signup/signup.component';
 import { PageNotFoundComponent } from './components/layout/page-not-found/page-not-found.component';
 import { InternalisationService } from './services/internalisation/internalisation.service';
 import { UsersModule } from './components/auth/users.module';
+import { FilterAnimalsPipe } from './pipes/filter-animals.pipe';
+import { UsersRoutingModule } from './components/auth/users-routing.module';
+import { HomeComponent } from './components/layout/home/home.component';
+import { AnimalProfileComponent } from './components/layout/searches/animal-profile-component/animal-profile.component';
+import { DisplayAnimalsComponent } from './components/layout/searches/display-animals/display-animals.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -32,19 +37,20 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 @NgModule({
   declarations: [
+    FilterAnimalsPipe,
     AppComponent,
     LoginComponent,
     AboutComponent,
     PrivacyPolicyComponent,
     SignupComponent,
-    PageNotFoundComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    UsersModule,
     AppRoutingModule,
     HttpClientModule,
-    UsersModule,
     AngularFontAwesomeModule,
     SweetAlert2Module.forRoot({
       buttonsStyling: true,
@@ -67,7 +73,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   providers: [
     AuthService,
     InternalisationService,
-    DisplayAdoptablesService,
+    DisplayAdoptablesService
   ],
   exports: [],
   bootstrap: [AppComponent]
