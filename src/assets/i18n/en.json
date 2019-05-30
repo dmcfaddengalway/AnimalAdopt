@@ -1,0 +1,36 @@
+{
+  "COMMON": {
+    "LOGIN": "Login",
+    "SIGNUP": "Signup",
+    "SEARCH": "Search",
+    "DOGS": "Dogs",
+    "CATS": "Cats",
+    "VIEW_DOGS": "View dogs",
+    "VIEW_CATS": "View cats",
+    "ADOPT": "Adopt",
+    "PRIVACY_POLICY": "Privacy Policy",
+    "CONTACT": "Contact",
+    "IMPRESSUM": "Impressum",
+    "SPONSORS": "Sponsors",
+    "HOME": "Home"
+  },
+  "FORM_FIELDS": {
+    "EMAIL": "Email address",
+    "FIRST_NAME": "First Name",
+    "LAST_NAME": "Last Name",
+    "NAME": "Full Name",
+    "MESSAGE": "Please enter your message here.",
+    "SUBMIT": "Submit"
+  },
+  "HOME": {
+    "FIND_NEW_FRIEND": "Find your new best friend"
+  },
+  "FILTERS": {
+    "ANIMALS": "Animals",
+    "AGE": "Age",
+    "BREEDS": "Breeds",
+    "STATUS": "Status",
+    "SIZE": "Size",
+    "MAINTENANCE_LEVEL": "Maintenance Level"
+  }
+}

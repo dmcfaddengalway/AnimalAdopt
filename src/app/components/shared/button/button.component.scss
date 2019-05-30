@@ -1,0 +1,18 @@
+@import '../../../../styles/global/colours';
+@import '../../../../styles/global/fonts';
+@import '../../../../styles/global/mixins';
+@import '../../../../styles/global/placeholders';
+
+div {
+  margin: 5px auto;
+
+  .button {
+    margin: 0px auto;
+    font-family: $fontBodyStack;
+    color: white;
+    background-color: transparent;
+    padding: 10px;
+    width: 100%;
+    @include button(null, 18px, 5px solid $main-brand-color, 5px, $main-brand-color);
+  }
+}

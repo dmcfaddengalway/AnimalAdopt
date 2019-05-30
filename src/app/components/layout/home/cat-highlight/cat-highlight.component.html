@@ -1,16 +1,19 @@
 <div class="catHighlightArea">
-  
-    <div class="catBox">
-      <h1>Cats</h1>
-      <p>Find your new best friend</p>
-      <p>{{ 8 + 12 }} cats available</p>
 
-      <button routerLink="/displayAnimals">View cats</button>
+    <div class="catBox">
+
+      <div class="catText">
+        <h1>{{ 'COMMON.CATS' | translate }}</h1>
+        <p>{{ 'HOME.FIND_NEW_FRIEND' | translate }}</p>
+        <p>{{ 8 + 12 }} cats available</p>
+
+        <app-button routerLink="/displayAnimals">{{ 'COMMON.VIEW_CATS' | translate }}</app-button>
+      </div>
+
     </div>
-    
+
     <div class="catPicture">
       <img src="/assets/media/images/cat-highlight.jpg" alt="Evil cat waiting to pounce!">
     </div>
-  
+
   </div>
-  

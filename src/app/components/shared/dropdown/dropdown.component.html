@@ -1,0 +1,21 @@
+<div class="custom-selector">
+
+  <div class=selectorBox>
+
+    <div class=profile-icon>
+      <i class="fa fa-user"></i>
+    </div>
+
+    <select [(ngModel)]="selectedOption" (ngModelChange)="updateSelectedOption($event)">
+      <option *ngFor="let option of optionList" [ngValue]="option.value">
+        {{ option.name }}
+      </option>
+    </select>
+
+    <div class="profile-arrow-icon">
+      <i class="fa fa-angle-down"></i>
+    </div>
+
+  </div>
+
+</div>

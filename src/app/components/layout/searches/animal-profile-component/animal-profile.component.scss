@@ -22,7 +22,7 @@
                 width: 75%;
                 float: left;
             }
-    
+
             .animalInfoBox {
                 height: 100%;
                 width: 25%;
@@ -89,7 +89,7 @@
                     border: none;
                     margin: 0px 0px 40px 40px;
                 }
-    
+
                 textarea {
                     @include input(100%, 5px 10px, 0.75, $fontBodyStack, 18px, 5px);
                     display: block;
@@ -97,10 +97,10 @@
                     resize: none;
                     margin: 0px 0px 20px 40px;
                 }
-    
-                button[type="submit"] {
-                    @include button(100%, null, 1.25rem, 5px solid $main-brand-color, 5px, $main-brand-color);
+
+                app-button {
                     display: block;
+                    width: 100%;
                     font-family: $fontHeaderStack;
                     background-color: transparent;
                     margin: 0px 0px 0px 40px;
