@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DisplayAdoptablesService } from 'src/app/services/display-adoptables/display-adoptables.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProfileSquaresComponent } from '../profile-squares/profile-squares.component';

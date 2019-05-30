@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Animal } from 'src/app/models/animal';
+import { Animal } from '../../models/animal.model';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +14,6 @@ export class FilterAnimalsService {
     }
 
     return animals.filter(animal => animal.type.toLowerCase().includes(type[0]));
-}
+  }
 
 }

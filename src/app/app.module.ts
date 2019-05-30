@@ -33,8 +33,8 @@ import { AnimalProfileComponent } from './components/layout/searches/animal-prof
 import { InternalisationService } from './services/internalisation/internalisation.service';
 import { UsersModule } from './components/auth/users.module';
 
-export function createTranslateLoader(http: HttpClient) {
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, '/assets/i18n/', '.json');
 }
 
 @NgModule({
@@ -45,14 +45,6 @@ export function createTranslateLoader(http: HttpClient) {
     PrivacyPolicyComponent,
     SignupComponent,
     PageNotFoundComponent,
-    DogHighlightComponent,
-    CatHighlightComponent,
-    FeaturedAnimalComponent,
-    NewsletterComponent,
-    DisplayAnimalsComponent,
-    FiltersComponent,
-    ProfileSquaresComponent,
-    AnimalProfileComponent,
   ],
   imports: [
     BrowserModule,
