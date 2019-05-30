@@ -1,8 +1,8 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { DisplayAdoptablesService } from 'src/app/services/display-adoptables/display-adoptables.service';
-import { FormControl } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ProfileSquaresComponent } from '../profile-squares/profile-squares.component';
+import { Option } from 'src/app/models/option.model';
 
 @Component({
   selector: 'app-filters',
@@ -11,21 +11,39 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class FiltersComponent implements OnInit {
 
-  types = ['Dog', 'Cat'];
-  ages = ['Puppy', 'Young Adult', 'Adult', 'Senior'];
-  public breedName = '';
-  neuterStatus = ['Neutered', 'Intact'];
-  sizes = ['Small', 'Medium', 'Large', 'Extra Large'];
-  maintenance = ['Lazy', 'Active'];
+  public types: Option[] = [
+    { name: 'Dogs', value: 'dog' },
+    { name: 'Cats', value: 'cat' }
+  ];
 
-  control: FormControl = new FormControl('');
-  @Output() add = new EventEmitter();
-  selectedFilters: number;
+  public ages: Option[] = [
+    { name: 'Puppy', value: 'puppy' },
+    { name: 'Young Adult', value: 'young-adult' },
+    { name: 'Adult', value: 'adult' },
+    { name: 'Senior', value: 'senior' },
+  ];
 
-  constructor(private displayAdoptablesService: DisplayAdoptablesService,
+  public neuterStatus: Option[] = [
+    { name: 'Neutered', value: 'neutered' },
+    { name: 'Intact', value: 'intact' }
+  ];
+
+  public sizes: Option[] = [
+    { name: 'Small', value: 'small' },
+    { name: 'Medium', value: 'medium' },
+    { name: 'Large', value: 'large' },
+    { name: 'Extra Large', value: 'extra-large' },
+  ];
+
+  public maintenance: Option[] = [
+    { name: 'Lazy', value: 'lazy' },
+    { name: 'Active', value: 'active' }
+  ];
+
+  constructor(private profileSquares: ProfileSquaresComponent,
+              private router: Router,
               private activatedRoute: ActivatedRoute,
-              private httpClient: HttpClient,
-              private router: Router
+              private displayAdoptablesService: DisplayAdoptablesService
              ) { }
 
   ngOnInit() {

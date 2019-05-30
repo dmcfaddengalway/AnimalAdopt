@@ -17,41 +17,33 @@ html, body {
         text-align: center;
         float: left;
         margin: 0;
-    
-        h1 {
-            font-family: $fontHeaderStack;
-            font-size: 4rem;
-            margin: 120px 0px;
-        }
-    
-        p {
-            font-family: $fontSubheaderStack;
-            font-size: 1.5rem;
-            margin: 20px;
-        }
-    
-        button {
-            color: $main-dark-color;
-            background-color: transparent;
-            padding: 15px 15px;
-            font-size: 1.5rem;
-            border: 5px solid $main-dark-shade;
-            border-radius: 5px;
-            width: 200px;
 
-            &:hover {
-                background-color: $main-dark-shade;
+        .catText {
+            width: 90%;
+            margin: 0px auto;
+
+            h1 {
+                font-family: $fontHeaderStack;
+                font-size: 4rem;
+                margin: 120px 0px;
             }
-    
+
+            p {
+                font-family: $fontSubheaderStack;
+                font-size: 1.5rem;
+                margin: 20px;
+            }
+
         }
+
     }
-    
+
     .catPicture {
         width: 70%;
         height: 100%;
         float: right;
         margin: 0px;
-    
+
         img {
             width: 100%;
             height: 100%;

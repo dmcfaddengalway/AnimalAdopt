@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { DisplayAdoptablesService } from 'src/app/services/display-adoptables/display-adoptables.service';
-import { Animal } from 'src/app/models/animal';
+import { Animal } from '../../../../models/animal.model';
 import { AvailableStates } from '../../../constants/available-states.constants';
 import { ActivatedRoute, Router } from '@angular/router';
 

@@ -79,17 +79,6 @@ h1 {
                 background-color: $main-light-shade;
             }
         }
-    
-        input[type="submit"] {
-            border: none;
-            background-color: transparent;
-            padding: 15px;
-            @include button(200px, null, 1.5rem, 5px solid $main-dark-shade, 5px, $main-dark-shade);
-    
-            &:hover {
-                background-color: $main-dark-shade;
-            }
-        }
 
         textarea {
             height: 150px;
@@ -97,15 +86,6 @@ h1 {
             resize: none;
             margin: 5px 0px;
             @include input(100%, 5px 10px, 0.75, $fontBodyStack, 18px, 5px);
-        }
-
-        button {
-            margin: 0px auto;
-            font-family: $fontBodyStack;
-            color: white;
-            background-color: transparent;
-            padding: 10px;
-            @include button(100%, null, 18px, 5px solid $main-brand-color, 5px, $main-brand-color);
         }
     }
 }

@@ -1,0 +1,36 @@
+{
+  "COMMON": {
+    "LOGIN": "Ensaluti",
+    "SIGNUP": "Registrigi",
+    "SEARCH": "Serchas",
+    "DOGS": "Hundoj",
+    "CATS": "Katoj",
+    "HOME": "Hejmo",
+    "VIEW_DOGS": "Rigardu hundojn",
+    "VIEW_CATS": "Rigardu katojn",
+    "ADOPT": "Adopti",
+    "PRIVACY_POLICY": "Privateca Politiko",
+    "CONTACT": "Kontakto",
+    "IMPRESSUM": "Impressum",
+    "SPONSORS": "Sponsoroj"
+  },
+  "FORM_FIELDS": {
+    "EMAIL": "Retpoŝta adreso",
+    "FIRST_NAME": "Unua Nomo",
+    "LAST_NAME": "Familia Nomo",
+    "NAME": "Plena Nomo",
+    "MESSAGE": "Bonvolu enmeti vian mesaĝon ĉi tie",
+    "SUBMIT": "Sendu"
+  },
+  "HOME": {
+    "FIND_NEW_FRIEND": "Trovu vian novan plej bonan amikon"
+  },
+  "FILTERS": {
+    "ANIMALS": "Bestoj",
+    "AGE": "Aĝo",
+    "BREED": "Reproduktiĝas",
+    "STATUS": "Statuso",
+    "SIZE": "Grandeco",
+    "MAINTENANCE_LEVEL": "Nivelo de bontenado"
+  }
+}

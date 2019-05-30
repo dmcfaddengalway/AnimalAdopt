@@ -1,0 +1,26 @@
+<app-header></app-header>
+
+<div class="userHightlightArea">
+
+  <div class="userBox">
+
+    <ul class="optionsBox">
+      <li class="optionItems"><a routerLink="/portal/profileView">Profile</a></li>
+      <li class="optionItems"><a routerLink="/portal/profilePassword">Password</a></li>
+      <li class="optionItems"><a routerLink="/portal/contactDetails">Contact Details</a></li>
+      <li class="optionItems"><a routerLink="/portal/dataDownload">Data Download</a></li>
+      <li class="optionItems"><a routerLink="/portal/language">Language</a></li>
+    </ul>
+
+  </div>
+
+  <div class="childOptions">
+
+    <router-outlet></router-outlet>
+
+  </div>
+
+
+</div>
+
+<app-footer></app-footer>

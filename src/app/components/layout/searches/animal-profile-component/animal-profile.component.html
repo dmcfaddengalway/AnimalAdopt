@@ -22,17 +22,17 @@
                 <img src="{{ animal.image }}" class="d-block w-100" alt="...">
               </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="/displayAnimals/:id/#carouselExampleIndicators" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <a class="carousel-control-next" href="/displayAnimals/:id/#carouselExampleIndicators" role="button" data-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
             </a>
           </div>
         </div>
-  
+
         <div class="animalInfoBox">
           <h1 class="nameAndAge">{{ animal.name }}, {{ animal.age }}</h1>
           <p class="breed">{{ animal.breed }}</p>
@@ -60,8 +60,8 @@
             <input type="text" name="name" placeholder="Name">
             <input type="text" name="email" placeholder="E-mail">
             <textarea name="message" columns="30" rows="10" placeholder="What do you want to say to {{ animal.name }}?"></textarea>
-            <button type="submit" value="Submit" 
-              [swal]="{ title: 'Submitted', text: 'Your message has been successfuly submitted.', type: 'success', confirmButtonText: 'Okay'}">Submit</button>
+            <app-button [buttonType]="buttonType"
+              [swal]="{ title: 'Submitted', text: 'Your message has been successfuly submitted.', type: 'success', confirmButtonText: 'Okay'}">{{ 'FORM_FIELDS.SUBMIT' | translate}}</app-button>
           </form>
         </div>
       </div>
