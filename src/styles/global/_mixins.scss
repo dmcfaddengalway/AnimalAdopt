@@ -11,11 +11,12 @@
     }
 }
 
-@mixin button($height, $fontSize, $border, $borderRadius, $hoverBackground) {
+@mixin button($height, $colour, $fontSize, $border, $borderRadius, $hoverBackground) {
     height: $height;
     font-size: $fontSize;
     border: $border;
     border-radius: $borderRadius;
+    color: $colour;
 
     &:hover {
         background-color: $hoverBackground;

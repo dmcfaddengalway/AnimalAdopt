@@ -53,7 +53,7 @@
         background-color: transparent;
         padding: 15px;
         width: 200px;
-        @include button(null, 1.5rem, 5px solid $main-dark-shade, 5px, $main-dark-shade);
+        @include button(null, white, 1.5rem, 5px solid $main-dark-shade, 5px, $main-dark-shade);
 
         &:hover {
             background-color: $main-dark-shade;
