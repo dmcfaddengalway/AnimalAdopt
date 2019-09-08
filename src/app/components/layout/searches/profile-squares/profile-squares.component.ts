@@ -17,6 +17,7 @@ export class ProfileSquaresComponent implements OnInit {
   public animalsToShow: Animal[];
   public loading = false;
   public ViewStates = AvailableStates;
+  public id = '1';
 
   constructor(private displayAdoptablesService: DisplayAdoptablesService,
               private activatedRoute: ActivatedRoute,
@@ -25,11 +26,7 @@ export class ProfileSquaresComponent implements OnInit {
   }
 
   public ngOnInit() {
-    this.showAnimals(null);
-    this.activatedRoute.queryParamMap.subscribe(params => {
-      console.log('In profile: ', params.get('gender'));
-      this.displayAdoptablesService.getAllAnimals(params);
-    });
+    this.showAnimals(this.id);
     this.loading = true;
   }
 
@@ -49,6 +46,7 @@ export class ProfileSquaresComponent implements OnInit {
 
   public showAnimals(filters): void {
     this.loading = true;
+    console.log(filters);
     this.displayAdoptablesService.getAllAnimals(filters)
       .subscribe(animalsReturned => {
         this.animalsToShow = animalsReturned;
@@ -58,7 +56,7 @@ export class ProfileSquaresComponent implements OnInit {
   }
 
   public bundleParams(filter) {
-    if (this.filterCriteria.includes(filter)) {
+    if (!this.filterCriteria.includes(filter)) {
       this.filterCriteria.push(filter);
       this.showAnimals(this.filterCriteria);
       this.router.navigate(['/displayAnimals']);

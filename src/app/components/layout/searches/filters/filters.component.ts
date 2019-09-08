@@ -50,14 +50,7 @@ export class FiltersComponent implements OnInit {
   }
 
   public updateFilters(filterCriteria: string) {
-    // this.add.emit(filterCriteria);
 
-    // this.profileSquares.showAnimals(filterCriteria);
-    this.activatedRoute.queryParamMap.subscribe(params => {
-      console.log('Array of Params: ', params.get('gender'));
-      this.router.navigate([], { relativeTo: this.activatedRoute, queryParams: this.activatedRoute.snapshot.queryParams });
-      this.displayAdoptablesService.getAllAnimals(params);
-    });
   }
 
   // public updateList() {

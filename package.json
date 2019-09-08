@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve && json-server --watch db.json",
+    "start": "ng serve",
     "build": "ng test && ng build",
     "test": "ng lint && ng test",
     "lint": "ng lint",

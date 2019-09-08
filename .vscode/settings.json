@@ -1,3 +1,42 @@
 {
-  "git.ignoreLimitWarning": true
+  "files.autoSave": "afterDelay",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true
+  },
+  "editor.scrollBeyondLastLine": false,
+  "editor.formatOnPaste": true,
+  "editor.fontSize": 14,
+  "editor.tabSize": 2,
+  "editor.fontFamily":  "SFMono-Bold",
+  "editor.fontLigatures": true,
+  "editor.cursorBlinking": "smooth",
+  "search.location": "sidebar",
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.tree.renderIndentGuides": "none",
+  "vscode_custom_css.imports": [
+    "file:///Users/dannymcfadden/Documents/vsCustom.css"
+  ],
+  "vscode_custom_css.policy": true,
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    ".build/**": true,
+    "out/**": true,
+    ".js": true,
+    "**.map": true,
+    "out-build/**": true,
+    "out-vscode/**": true,
+    "i18n/**": true,
+    "extensions/**/out/**": true,
+    "test/smoke/out/**": true,
+    "src/vs/base/test/node/uri.test.data.txt": true,
+    "dist/**": true
+  }
 }

@@ -22,11 +22,12 @@ export class DisplayAdoptablesService {
     return this.httpClient.get<Animal>(this.baseUrl + '/displayAnimals/' + `${id}`);
   }
 
-  public getAllAnimals(params): Observable<Animal[]> {
-    console.log(params);
-    const a = this.httpClient.get<Animal[]>(this.baseUrl + '/displayAnimals', { params } );
-    console.log('a: ', a);
-    return a;
-      // .filter(animal => animal.type.toLocaleLowerCase().includes('dog'));
+  public getAllAnimals(params: string): Observable<Animal[]> {
+    const options = params.trim() ? new HttpParams()
+      .append('id', params) : {} ;
+
+    console.log('fdsds', params);
+
+    return this.httpClient.get<Animal[]>(this.baseUrl + '/displayAnimals', options);
   }
 }
