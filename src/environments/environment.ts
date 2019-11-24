@@ -4,14 +4,6 @@
 
 export const environment = {
   production: false,
-  firebase: {
-    apiKey: 'AIzaSyCIaQkI1xhPVRaIV3aBMJHN-wq53UwJpkw',
-    authDomain: 'recipe-app-cf0dd.firebaseapp.com',
-    databaseURL: 'https://recipe-app-cf0dd.firebaseio.com',
-    projectId: 'recipe-app-cf0dd',
-    storageBucket: 'recipe-app-cf0dd.appspot.com',
-    messagingSenderId: '883511898308'
-  }
 };
 
 /*
