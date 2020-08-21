@@ -11,8 +11,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './services/auth/auth.service';
 import { DisplayAdoptablesService } from './services/display-adoptables/display-adoptables.service';
 
-import { AngularFontAwesomeModule } from 'angular-font-awesome';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/layout/generic/header/header.component';
@@ -59,7 +57,6 @@ import { FilterAnimalsPipe } from './pipes/filter-animals.pipe';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    AngularFontAwesomeModule,
     SweetAlert2Module.forRoot({
       buttonsStyling: true,
       customClass: 'modal-content',
