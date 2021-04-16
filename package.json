@@ -29,7 +29,7 @@
     "grpc": "^1.24.3",
     "request": "^2.88.2",
     "roboto-fontface": "^0.10.0",
-    "rxjs": "^6.4.0",
+    "rxjs": "^6.6.7",
     "rxjs-compat": "^6.4.0",
     "sweetalert2": "^7.33.1",
     "tslib": "^2.0.0",
