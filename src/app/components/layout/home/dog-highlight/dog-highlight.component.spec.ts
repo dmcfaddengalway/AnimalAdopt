@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { DogHighlightComponent } from './dog-highlight.component';
 
@@ -6,7 +6,7 @@ describe('DogHighlightComponent', () => {
   let component: DogHighlightComponent;
   let fixture: ComponentFixture<DogHighlightComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ DogHighlightComponent ]
     })

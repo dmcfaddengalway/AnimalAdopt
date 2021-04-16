@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { CatHighlightComponent } from './cat-highlight.component';
 
@@ -6,7 +6,7 @@ describe('CatHighlightComponent', () => {
   let component: CatHighlightComponent;
   let fixture: ComponentFixture<CatHighlightComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ CatHighlightComponent ]
     })
