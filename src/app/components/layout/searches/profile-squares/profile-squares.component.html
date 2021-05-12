@@ -1,13 +1,13 @@
 <div class="profileHightlightArea">
 
   <div class="profileBox">
-    
-    <a routerLink="/displayAnimals/{{ animal.id }}" *ngFor="let animal of animals | filterAnimals" class="profile">
+
+    <a routerLink="/displayAnimals/{{ animal.id }}" *ngFor="let animal of filteredResults" class="profile">
       <div>
         <div class="profileImage">
           <img src="{{ animal.image }}">
         </div>
-      
+
         <hr>
 
         <div class="profileInfo">
@@ -16,7 +16,7 @@
         </div>
       </div>
     </a>
-    
+
 
   </div>
 </div>

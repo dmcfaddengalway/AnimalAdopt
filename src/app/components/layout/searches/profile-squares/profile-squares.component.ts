@@ -1,42 +1,37 @@
 import { Component, OnInit } from '@angular/core';
+import { Animal } from 'src/app/models/animal';
 
 import { DisplayAdoptablesService } from 'src/app/services/display-adoptables/display-adoptables.service';
-
-import { FilterAnimalsPipe } from '../../../../pipes/filter-animals.pipe';
 
 @Component({
   selector: 'app-profile-squares',
   templateUrl: './profile-squares.component.html',
-  styleUrls: ['./profile-squares.component.scss'],
-  providers: [FilterAnimalsPipe]
+  styleUrls: ['./profile-squares.component.scss']
 })
-export class ProfileSquaresComponent implements OnInit {
+export class ProfileSquaresComponent {
+  public filteredResults = [];
+  public filterCriteria: any[] = [];
+  public animals: Animal[] = [];
 
-  filteredResults = [];
-  filterCriteria: any[] = [];
-  animals: any[] = [];
-  baseUrl = 'http://localhost:3000';
-
-  constructor(private displayAdoptablesService: DisplayAdoptablesService,
-              private filterAnimalsPipe: FilterAnimalsPipe,
-             ) {
-
-  }
-
-  ngOnInit() {
-    return this.displayAdoptablesService.getAnimals()
-      .subscribe((res: any[]) => {
+  constructor(private displayAdoptablesService: DisplayAdoptablesService) {
+    this.displayAdoptablesService.getAnimals()
+      .subscribe(res => {
         this.animals = res;
+        this.filteredResults = res;
         console.log('Animals init: ', this.animals);
+        console.log('Filtered Animals init: ', this.filteredResults);
       });
   }
 
-  ngOnChange(filter) {
-    this.filterCriteria.push(filter);
-    console.log('Adding to filterCriteria: ', this.filterCriteria);
+  ngOnChange(filter: string) {
+    console.log('Filtering by: ', filter);
 
-    this.animals = this.filterAnimalsPipe.transform(this.animals, this.filterCriteria);
-    console.log('Animals change: ', this.animals);
+    this.filteredResults = this.animals.filter(animal => {
+      return animal.type == filter;
+    });
+
+    console.log('FilteredAnimals change: ', this.filteredResults);
+    console.log('Animals: ', this.animals);
   }
 
 }

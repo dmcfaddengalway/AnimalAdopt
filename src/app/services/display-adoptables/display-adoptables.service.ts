@@ -10,18 +10,17 @@ import { Observable } from 'rxjs';
 })
 export class DisplayAdoptablesService {
 
-  animals = [];
+  animals: Animal[] = [];
   baseUrl = 'http://localhost:3000';
 
-  constructor(private httpClient: HttpClient) {
+  constructor(private httpClient: HttpClient) { }
 
+  public getAnimals() {
+    return this.httpClient.get<Animal[]>(this.baseUrl + '/displayAnimals');
   }
 
   public getAnimalById(id: number): Observable<any> {
-    return this.httpClient.get(this.baseUrl + '/displayAnimals/' + `${id}`);
+    return this.httpClient.get<Animal>(this.baseUrl + '/displayAnimals/' + `${id}`);
   }
 
-  public getAnimals() {
-    return this.httpClient.get(this.baseUrl + '/displayAnimals');
-  }
 }

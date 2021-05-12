@@ -27,6 +27,7 @@
     "core-js": "^2.5.4",
     "firebase": "^5.0.4",
     "grpc": "^1.24.3",
+    "json-server": "^0.16.3",
     "request": "^2.88.2",
     "roboto-fontface": "^0.10.0",
     "rxjs": "^6.6.7",

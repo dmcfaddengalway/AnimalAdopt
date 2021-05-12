@@ -4,7 +4,7 @@
     {
       "id": 1,
       "type": "dog",
-      "breed": "Bulldog",
+      "breed": "Boxer",
       "gender": "Male",
       "registry": null,
       "personality": "Bouncy",
