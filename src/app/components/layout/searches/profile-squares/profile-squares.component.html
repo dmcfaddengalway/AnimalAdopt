@@ -2,7 +2,7 @@
 
   <div class="profileBox">
 
-    <a routerLink="/displayAnimals/{{ animal.id }}" *ngFor="let animal of filteredResults" class="profile">
+    <a routerLink="/displayAnimals/{{ animal.id }}" *ngFor="let animal of filteredResults; let i = index; trackBy: trackAnimal" class="profile">
       <div>
         <div class="profileImage">
           <img src="{{ animal.image }}">

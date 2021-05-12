@@ -24,7 +24,7 @@ export class FiltersComponent implements OnInit {
 
   public updateFilters(filterCriteria: string) {
     const lowerFilter = filterCriteria.toLowerCase();
-    this.profileSquares.ngOnChange(lowerFilter);
+    this.profileSquares.updateFilter(lowerFilter);
   }
 
 }

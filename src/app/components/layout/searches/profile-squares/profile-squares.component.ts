@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 import { Animal } from 'src/app/models/animal';
 
 import { DisplayAdoptablesService } from 'src/app/services/display-adoptables/display-adoptables.service';
@@ -13,7 +13,8 @@ export class ProfileSquaresComponent {
   public filterCriteria: any[] = [];
   public animals: Animal[] = [];
 
-  constructor(private displayAdoptablesService: DisplayAdoptablesService) {
+  constructor(private displayAdoptablesService: DisplayAdoptablesService,
+    private cdr: ChangeDetectorRef) {
     this.displayAdoptablesService.getAnimals()
       .subscribe(res => {
         this.animals = res;
@@ -23,15 +24,16 @@ export class ProfileSquaresComponent {
       });
   }
 
-  ngOnChange(filter: string) {
+  updateFilter(filter: string) {
     console.log('Filtering by: ', filter);
 
     this.filteredResults = this.animals.filter(animal => {
-      return animal.type == filter;
+      return animal.breed == filter;
     });
 
+    this.cdr.detectChanges();
+
     console.log('FilteredAnimals change: ', this.filteredResults);
-    console.log('Animals: ', this.animals);
   }
 
 }
